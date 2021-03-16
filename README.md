@@ -42,6 +42,16 @@ Add `@tailwindcss/jit` to your PostCSS configuration _(instead of `tailwindcss`)
   }
 ```
 
+Laravel 8 with Laravel Mix 6, example:
+
+```js
+// webpackl.mix.js
+mix.postCss('resources/css/app.css', 'public/css', [
+    require('postcss-import'),
+    require('@tailwindcss/jit'),
+]);
+```
+
 Configure the `purge` option in your `tailwind.config.js` file with all of your template paths:
 
 ```js
